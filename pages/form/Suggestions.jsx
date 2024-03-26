@@ -89,10 +89,18 @@ export default function Suggestions() {
         w={["100%", "90%"]}
         height={["9em", "5em"]}
       />
-      <ContinueButton
+      <SubmitButton
+        disabled={!department}
         topMargin={8}
-        href="/form/Department"
-        onClick={() => saveDataAndShowLog("Next button clicked")}
+        href="/form/Thankyou"
+        onClick={() =>
+          setAnswers((prev) => {
+            const response = { ...prev, department: department };
+            sendLogs(logMessage("Submit button clicked"));
+            sendFormResponse(response);
+            return response;
+          })
+        }
         width={["100%", "90%"]}
       />
     </Layout>
