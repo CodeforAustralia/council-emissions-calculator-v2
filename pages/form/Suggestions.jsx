@@ -4,7 +4,7 @@ import Layout from "../../components/Layout/Layout";
 import useForm from "../../components/FormProvider";
 import {
   BackButton,
-  ContinueButton,
+  SubmitButton
 } from "../../components/LinkButton/LinkButton";
 import Q7Progress from "../../public/images/progress-bar/q7-progress-dots.svg";
 import Q6Cloud from "../../public/images/clouds/cloud-q6.svg";
