@@ -90,12 +90,12 @@ export default function Suggestions() {
         height={["9em", "5em"]}
       />
       <SubmitButton
-        disabled={!department}
+        disabled={!incentive}
         topMargin={8}
         href="/form/Thankyou"
         onClick={() =>
           setAnswers((prev) => {
-            const response = { ...prev, department: department };
+            const response = { ...prev, incentive: incentive };
             sendLogs(logMessage("Submit button clicked"));
             sendFormResponse(response);
             return response;
